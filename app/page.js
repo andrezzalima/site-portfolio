@@ -120,9 +120,9 @@ export default function Home() {
               </div>
 
               <div className='absolute right-5 border-2 border-purple-400 rounded-lg '>
-                <select className='bg-transparent min-w-8 text-center p-1.5 hover:cursor-pointer' value={language} onChange={handleLanguageChange}>
-                  <option value="pt">PT</option>
-                  <option value="en">EN</option>
+               <select className='bg-transparent min-w-8 text-center p-1.5 hover:cursor-pointer' value={language} onChange={handleLanguageChange}>
+                  <option value="pt" className='text-slate-700'>PT</option>
+                  <option value="en" className='text-slate-700'>EN</option>
                 </select>
               </div>
             </header>
