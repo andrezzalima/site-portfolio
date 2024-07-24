@@ -99,18 +99,18 @@ export default function Home() {
       {isLanguageLoaded ? (
         <section className="flex flex-col sm:min-h-screen sm:w-screen bg-emerald-50 text-slate-700 ">
 
-          <div className="text-slate-700 min-h-screen w-full flex flex-col " id='about'>
+          <div className="text-slate-700 min-h-screen w-full flex flex-col ">
             {  /* Cabeçalho */}
             <header className="h-24 flex justify-between p-6 sm:justify-evenly items-center bg-slate-700 text-emerald-50">
 
               {/* Botão do menu hambúrguer */}
-              <div className='fixed top-5 shadow-lg flex flex-col '>
+              <div className='fixed top-5 shadow-lg flex flex-col z-10'>
                 <button className=" sm:hidden block" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                   <IoMenu className='text-3xl sm:text-6xl text-purple-400' />
                 </button>
                 <div
                   className={`${isMenuOpen ? 'flex' : 'hidden'
-                    } sm:flex flex-col justify-between items-center sm:flex-row sm:gap-5 bg-purple-400/50 rounded-md p-3 text-sm`}>
+                    } sm:flex flex-col justify-between items-center sm:flex-row sm:gap-5 bg-purple-400/70 rounded-xl p-3 text-sm`}>
                   <a href="#about" onClick={() => setIsMenuOpen(!isMenuOpen)} >{t('about-me')}</a>
                   <a href="#projects" onClick={() => setIsMenuOpen(!isMenuOpen)}>{t('my-projects')}</a>
                   <a href="#experience" onClick={() => setIsMenuOpen(!isMenuOpen)}>{t('my-experience')}</a>
@@ -119,15 +119,15 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className='absolute right-5 border-2 border-purple-400 rounded-lg '>
-               <select className='bg-transparent min-w-8 text-center p-1.5 hover:cursor-pointer' value={language} onChange={handleLanguageChange}>
+              <div className='absolute right-5 border-2 border-purple-400 rounded-xl '>
+                <select className='bg-transparent min-w-8 text-center p-1.5 hover:cursor-pointer' value={language} onChange={handleLanguageChange}>
                   <option value="pt" className='text-slate-700'>PT</option>
                   <option value="en" className='text-slate-700'>EN</option>
                 </select>
               </div>
             </header>
             {/* Sobre mim */}
-            <div className='flex flex-col sm:flex-row items-center sm:h-full px-10 sm:px-20 sm:mt-2 w-full'>
+            <div id="about" className='flex flex-col sm:flex-row items-center sm:h-full px-10 sm:px-20 sm:mt-2 w-full'>
 
               <div className='flex flex-col items-center justify-center w-full sm:w-1/2 text-sm mt-5 p-1'>
                 <div className='text-xl sm:text-3xl w-full mb-5'>
@@ -168,13 +168,13 @@ export default function Home() {
           <div className='flex flex-col gap-5 sm:gap-24 text-center bg-purple-800  text-emerald-50 p-5' id='projects'>
             <h2 className='text-3xl sm:text-3xl mb-4'>{t('my-projects')}</h2>
             <div className='flex flex-col sm:flex-row gap-7'>
-              <a href='https://challenge-frontend-mentor-ga2x156k3-andrezzalima.vercel.app/' target='_blank' className='flex justify-center'><img src="/images/projeto1.png" className='w-3/4 rounded-lg '></img></a>
-              <a href='https://bytes5colors.vercel.app/' target='_blank' className='flex justify-center'><img src="/images/projeto2.png" className='w-3/4 rounded-lg'></img></a>
+              <a href='https://challenge-frontend-mentor-ga2x156k3-andrezzalima.vercel.app/' target='_blank' className='flex justify-center'><img src="/images/projeto1.png" className='w-3/4 rounded-xl '></img></a>
+              <a href='https://bytes5colors.vercel.app/' target='_blank' className='flex justify-center'><img src="/images/projeto2.png" className='w-3/4 rounded-xl'></img></a>
 
             </div>
             <div className='flex flex-col sm:flex-row gap-7'>
-              <a href='https://vercel.com/andrezzalimas-projects/pixel-art/8TGjGEoFvCRoZhUsDQu7mPFukKw7' target='_blank' className='flex justify-center'><img src="/images/projeto4.png" className='w-3/4 rounded-lg'></img></a>
-              <a href='https://time-of-7z9pppesv-andrezzalima.vercel.app/' target='_blank' className='flex justify-center'><img src="/images/projeto3.png" className='w-3/4 rounded-lg'></img></a>
+              <a href='https://vercel.com/andrezzalimas-projects/pixel-art/8TGjGEoFvCRoZhUsDQu7mPFukKw7' target='_blank' className='flex justify-center'><img src="/images/projeto4.png" className='w-3/4 rounded-xl'></img></a>
+              <a href='https://time-of-7z9pppesv-andrezzalima.vercel.app/' target='_blank' className='flex justify-center'><img src="/images/projeto3.png" className='w-3/4 rounded-xl'></img></a>
             </div>
 
 
@@ -183,13 +183,13 @@ export default function Home() {
           <div className="p-5 flex flex-col items-center gap-5 text-center" id="experience">
             <h2 className='text-3xl mb-4'>{t('experience')}</h2>
 
-            <div className='flex flex-col gap-3 p-5 border-2 border-purple-400 rounded-lg sm:w-1/2'>
+            <div className='flex flex-col gap-3 p-5 border-2 border-purple-400 rounded-xl sm:w-1/2'>
               <h3 className='text-purple-800 font-bold'>{t('function1')}</h3>
               <p><span className='text-purple-800'>Skills: </span>PHP, CODEIGNITER, POSTGRESQL, TORTOISE, XAMPP, BOOTSTRAP</p>
               <p className='text-sm'>
                 {t('desctiption-f1')}</p>
             </div>
-            <div className='flex flex-col gap-3 p-5 border-2 border-purple-400 rounded-lg sm:w-1/2'>
+            <div className='flex flex-col gap-3 p-5 border-2 border-purple-400 rounded-xl sm:w-1/2'>
               <h3 className='text-purple-800 font-bold'>{t('function2')}</h3>
               <p><span className='text-purple-800'>Skills: </span>HTML, CSS, JAVASCRIPT, REACT, MONGODB, TAILWIND</p>
               <p className='text-sm'>{t('desctiption-f2')}</p>
@@ -211,7 +211,7 @@ export default function Home() {
           {/* div tecnologias */}
           <div id="technologies" className='flex flex-col items-center justify-around p-10'>
             <h2 className='text-3xl mb-12'>{t('technologies')}</h2>
-            <div className='flex flex-wrap justify-evenly items-center gap-10'>
+            <div className='flex flex-wrap justify-between items-center content-center gap-10'>
               <div className='flex flex-col items-center'>
                 <FaHtml5 className='text-3xl sm:text-6xl text-purple-800' /> HTML</div>
               <div className='flex flex-col items-center'>
