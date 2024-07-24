@@ -224,7 +224,7 @@ export default function Home() {
           {/* div tecnologias */}
           <div id="technologies" className='flex flex-col items-center justify-around p-10'>
             <h2 className={`text-3xl mb-12 ${pacifico.className}`}>{t('technologies')}</h2>
-            <div className='flex flex-wrap justify-between items-center content-center gap-10'>
+            <div className='flex flex-wrap justify-evenly items-center content-center gap-10'>
               <div className='flex flex-col items-center'>
                 <FaHtml5 className='text-3xl md:text-6xl text-purple-800' /> HTML</div>
               <div className='flex flex-col items-center'>
