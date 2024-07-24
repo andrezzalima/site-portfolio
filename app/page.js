@@ -212,7 +212,7 @@ export default function Home() {
           {/* Formulário de contato */}
           <div id='contact' className='flex flex-col items-center justify-center w-full text-emerald-50 p-5 bg-purple-800' >
             <h2 className={`text-3xl mb-4 ${pacifico.className} p-5`}>{t('send-message')}</h2>
-            <form className="flex flex-col items-center gap-4 w-5/6 md:w-1/2" onSubmit={handleSubmit}>
+            <form className="flex flex-col items-center gap-4 w-5/6 md:w-1/2 text-slate-700" onSubmit={handleSubmit}>
               <input className='p-2 w-full rounded-xl'
                 type="text" placeholder={t('f-name')} name="name" required value={name} onChange={(e) => setName(e.target.value)} />
               <input className='p-2 w-full rounded-xl' type="email" placeholder={t('f-email')} name="email" required value={email} onChange={(e) => setEmail(e.target.value)} />
