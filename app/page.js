@@ -143,13 +143,13 @@ export default function Home() {
             <div id="about" className='flex flex-col md:flex-row items-center md:h-full px-10 md:px-20 md:mt-2 w-full'>
 
               <div className='flex flex-col items-center justify-center w-full md:w-1/2 text-sm mt-5 p-1'>
-                <div className={`text-xl md:text-3xl w-full mb-5`}>
+                <div className={`text-xl md:text-3xl w-full mb-5 ${pacifico.className}`}>
                   <h2 className={`mb-4 text-2xl md:text-2xl `}>
                     {t('hi')}
                   </h2>
                   <p className='text-xl md:text-6x ml-7 '>{t('i-am')}</p><br></br>
                   <div className='text-4xl md:text-6x flex flex-col items-center font-bold'>
-                    <h1 className={`text-purple-800 ${pacifico.className}`}>{t('name')}</h1>
+                    <h1 className={`text-purple-800`}>{t('name')}</h1>
                   </div>
                 </div>
 
