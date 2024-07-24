@@ -148,7 +148,7 @@ export default function Home() {
                     {t('hi')}
                   </h2>
                   <p className='text-xl md:text-6x ml-7 '>{t('i-am')}</p><br></br>
-                  <div className='text-4xl md:text-6x flex flex-col items-center font-bold'>
+                  <div className='text-3xl md:text-6x flex flex-col items-center font-bold'>
                     <h1 className={`text-purple-800 ${pacifico.className}`}>{t('name')}</h1>
                   </div>
                 </div>
