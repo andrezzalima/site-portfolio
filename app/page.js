@@ -114,11 +114,7 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Portfólio - {t('name')}</title>
-        <meta name="description" content="Portfólio Andrezza Lima" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+
       {isLanguageLoaded ? (
         <section className={`flex flex-col md:min-h-screen md:max-w-screen bg-emerald-50 text-slate-700 ${roboto.className}`}>
 
@@ -181,7 +177,7 @@ export default function Home() {
                 </div>
               </div>
             </header>
-            
+
             {/* Sobre mim */}
             <div id="about" className='flex flex-col md:flex-row items-center md:h-full px-10 md:px-20 md:mt-2 w-full min-h-full'>
               <div className='flex flex-col items-center justify-center w-full md:w-1/2 text-sm mt-5 p-1'>
@@ -200,10 +196,15 @@ export default function Home() {
                   <div className='w-full flex justify-center items-center py-5'>
                     <img src="/images/group1.png" className='w-72 md:w-80 h-72 md:h-80' style={{ objectFit: 'cover' }}></img>
                   </div>
+                  <div className="flex justify-evenly py-8">
+                    <a href='www.linkedin.com' target='_blank'><IoLogoLinkedin className='text-2xl' /></a>
+                    <a href='www.github.com/andrezzalima' target='_blank'><FaGithub className='text-2xl' /></a>
+                    <a href='/CV_Andrezza_Lima.pdf' download='CV_Andrezza-Lima.pdf' className='flex items-center'><IoCloudDownloadSharp className='mr-3 text-2xl' />Downlod CV</a>
+                  </div>
                 </div>
               </div>
               {/* div descrição */}
-              <div className='flex flex-col items-center justify-center w-full h-full md:w-1/2 text-sm mt-5 md:mt-0 p-1 mb-4'>
+              <div className='flex flex-col items-end justify-end w-full h-full md:w-1/2 text-sm mt-5 md:mt-16 p-1 mb-4'>
                 <div className='w-full mb-5'>
                   <p className='text-sm md:text-lg mb-2'>
                     {t('description-pt1')}
@@ -298,11 +299,7 @@ export default function Home() {
 
           {/* Rodapé */}
           <footer className={`bg-slate-700 text-emerald-50 p-5 flex flex-col items-center justify-center min-h-32 gap-5 ${montserrat.className}`}>
-            <div className="flex justify-evenly gap-10">
-              <a href='www.linkedin.com' target='_blank'><IoLogoLinkedin className='text-2xl' /></a>
-              <a href='www.github.com/andrezzalima' target='_blank'><FaGithub className='text-2xl' /></a>
-              <a href='/CV_Andrezza_Lima.pdf' download='CV_Andrezza-Lima.pdf' className='flex items-center'><IoCloudDownloadSharp className='mr-3 text-2xl' />Downlod CV</a>
-            </div>
+
             <div className='flex'>
               <p className='flex items-center text-center text-sm'>Copyright 2024. <FaRegCopyright className='mx-1' /> {t('copy')}.</p>
             </div>
