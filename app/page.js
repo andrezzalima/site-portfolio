@@ -254,7 +254,7 @@ export default function Home() {
 
           {/* Formulário de contato */}
           <div id='contact' className='flex flex-col items-center justify-center w-full text-emerald-50 p-5 bg-purple-800 md:h-screen' >
-            <h2 className={`text-2xl my-4 ${montserrat.className} p-5`}>{t('send-message')}</h2>
+            <h2 className={`text-2xl my-4 ${montserrat.className} p-5 md:mb-16 md:text-3xl`}>{t('send-message')}</h2>
             <form className="flex flex-col mb-12 items-center gap-6 w-5/6 md:w-1/2 text-slate-700" onSubmit={handleSubmit}>
               <input className='p-2 w-full rounded-xl'
                 type="text" placeholder={t('f-name')} name="name" required value={name} onChange={(e) => setName(e.target.value)} />
