@@ -196,7 +196,7 @@ export default function Home() {
                   <div className='w-full flex justify-center items-center py-5'>
                     <img src="/images/group1.png" className='w-72 md:w-80 h-72 md:h-80' style={{ objectFit: 'cover' }}></img>
                   </div>
-                  <div className="flex justify-evenly py-8">
+                  <div className="flex justify-evenly py-8 md:justify-center md:gap-16 ">
                     <a href='www.linkedin.com' target='_blank'><IoLogoLinkedin className='text-2xl' /></a>
                     <a href='www.github.com/andrezzalima' target='_blank'><FaGithub className='text-2xl' /></a>
                     <a href='/CV_Andrezza_Lima.pdf' download='CV_Andrezza-Lima.pdf' className='flex items-center'><IoCloudDownloadSharp className='mr-3 text-2xl' />Downlod CV</a>
@@ -222,7 +222,7 @@ export default function Home() {
           </div>
           {/* div projects */}
           <div className='flex flex-col gap-5 md:gap-24 text-center bg-purple-800  text-emerald-50 p-5' id='projects'>
-            <h2 className={`text-3xl my-4 ${montserrat.className}`}>{t('my-projects')}</h2>
+            <h2 className={`text-3xl my-4 md:mt-20 ${montserrat.className}`}>{t('my-projects')}</h2>
             <div className='flex flex-col md:flex-row gap-7'>
               <a href='https://challenge-frontend-mentor-ga2x156k3-andrezzalima.vercel.app/' target='_blank' className='flex justify-center'><img src="/images/projeto1.png" className='w-3/4 rounded-xl '></img></a>
               <a href='https://bytes5colors.vercel.app/' target='_blank' className='flex justify-center'><img src="/images/projeto2.png" className='w-3/4 rounded-xl'></img></a>
@@ -236,8 +236,8 @@ export default function Home() {
 
           </div>
           {/* div experiences */}
-          <div className="p-5 flex flex-col items-center gap-5 text-center" id="experience">
-            <h2 className={`text-3xl my-4 ${montserrat.className}`}>{t('experience')}</h2>
+          <div className="p-5 flex flex-col items-center gap-5 text-center md:h-screen" id="experience">
+            <h2 className={`text-3xl my-4 md:mt-20 ${montserrat.className}`}>{t('experience')}</h2>
 
             <div className='flex flex-col gap-3 p-5 border-2 border-purple-400 rounded-xl md:w-1/2'>
               <h3 className='text-purple-800 font-bold'>{t('function1')}</h3>
@@ -253,9 +253,9 @@ export default function Home() {
           </div>
 
           {/* Formulário de contato */}
-          <div id='contact' className='flex flex-col items-center justify-center w-full text-emerald-50 p-5 bg-purple-800' >
+          <div id='contact' className='flex flex-col items-center justify-center w-full text-emerald-50 p-5 bg-purple-800 md:h-screen' >
             <h2 className={`text-2xl my-4 ${montserrat.className} p-5`}>{t('send-message')}</h2>
-            <form className="flex flex-col mb-12 items-center gap-4 w-5/6 md:w-1/2 text-slate-700" onSubmit={handleSubmit}>
+            <form className="flex flex-col mb-12 items-center gap-6 w-5/6 md:w-1/2 text-slate-700" onSubmit={handleSubmit}>
               <input className='p-2 w-full rounded-xl'
                 type="text" placeholder={t('f-name')} name="name" required value={name} onChange={(e) => setName(e.target.value)} />
               <input className='p-2 w-full rounded-xl' type="email" placeholder={t('f-email')} name="email" required value={email} onChange={(e) => setEmail(e.target.value)} />
