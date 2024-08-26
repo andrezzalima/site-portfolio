@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
+import { useState } from "react"; 
 
 export const HoverEffect = ({ items, className }) => {
   let [hoveredIndex, setHoveredIndex] = useState(null);
@@ -68,7 +68,7 @@ export const CardImage = ({ src, alt, className }) => {
     <img
       src={src}
       alt={alt}
-      className={cn("w-full h-auto object-cover rounded-lg", className)} 
+      className={cn("w-full h-auto object-cover rounded-lg", className)}
     />
   );
 };
@@ -81,8 +81,4 @@ export const CardTitle = ({ className, children }) => {
   );
 };
 
-import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
-import { useState } from "react";
 

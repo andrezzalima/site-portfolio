@@ -6,7 +6,7 @@ import { Roboto } from 'next/font/google';
 import { Montserrat_Alternates } from 'next/font/google';
 import { Tangerine } from 'next/font/google';
 
-import { useState } from 'react';
+import { useState } from "react"; 
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import '../next-i18next.config.js';
