@@ -1,7 +1,6 @@
 "use client";
 
 import './globals.css';
-import { Pacifico } from 'next/font/google';
 import { Roboto } from 'next/font/google';
 import { Montserrat_Alternates } from 'next/font/google';
 import { Tangerine } from 'next/font/google';
@@ -10,12 +9,8 @@ import { useState } from "react";
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import '../next-i18next.config.js';
-import Link from 'next/link';
 import Image from 'next/image';
 import { HoverEffect } from "./ui/card-hover-effect";
-import { AnimatePresence, motion } from "framer-motion";
-
-
 
 import { RiNextjsFill } from "react-icons/ri";
 import { RiJavascriptFill } from "react-icons/ri";
