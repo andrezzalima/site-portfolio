@@ -311,7 +311,7 @@ export default function Home() {
             </div>
 
             {/* div projects */}
-            <div className='flex flex-col gap-5 text-center text-customGray p-5' id='projects' style={{
+            <div className='flex flex-col gap-5 text-center text-customBlack p-5' id='projects' style={{
               background: "linear-gradient(0deg, rgba(107,33,168,1) 0%, rgba(230,231,232,1) 100%)"
             }}>
               <h2 className={`text-3xl my-4 ${raleway.className}`}>{t('my-projects')}</h2>
