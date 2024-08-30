@@ -46,7 +46,7 @@ const montserrat = Montserrat_Alternates({
 
 
 const roboto = Roboto({
-  weight: ['300', '400', '500', '700' , '900'],
+  weight: ['300', '400', '500', '700', '900'],
   subsets: ['latin'],
 })
 const playfairDisplay = Playfair_Display({
@@ -140,7 +140,8 @@ export default function Home() {
     <>
 
       {isLanguageLoaded ? (
-        <section className={`flex flex-col md:min-h-screen md:w-screen text-customBlack ${raleway.className} md:px-52  md:bg-customBlack`}>
+        <section className={`flex flex-col md:min-h-screen md:w-screen w-scren text-customBlack ${raleway.className} md:px-52  md:bg-customBlack`}>
+          
           <div className='relative bg-customGray flex flex-col items-center'>
             {/* Botão do menu hambúrguer */}
             <div className="fixed top-5 left-5 md:left-auto z-10 w-2/3">
@@ -203,7 +204,7 @@ export default function Home() {
             </div>
 
 
-            <div className={` absolute top-5 right-5 ${raleway.className}`}>
+            <div className={` absolute top-5 right-7 ${raleway.className}`}>
               <div className="relative">
                 <button
                   className="flex items-center bg-transparent hover:cursor-pointer"
@@ -216,7 +217,7 @@ export default function Home() {
                     className="mr-1" />
                 </button>
                 {isOpen && (
-                  <ul className="absolute right-0 top-8 border-2 border-purple-400 rounded-xl bg-slate-700/70 z-10 text-emerald-50">
+                  <ul className="absolute right-0 top-8 rounded-lg bg-slate-700/70 z-10 text-emerald-50">
                     <li className="flex items-center p-2 hover:bg-gray-200 cursor-pointer rounded-t-lg "
                       onClick={() => handleLanguageChange('pt')}>
                       <Image
@@ -245,7 +246,7 @@ export default function Home() {
             {/* Sobre mim */}
             <div id="about" className='flex flex-col items-center md:h-full px-10 md:px-20 w-full min-h-screen bg-customGray'>
 
-
+              {/* OI, EU SOU */}
               <div className='flex flex-col items-center justify-center w-full md:w-full text-sm mt-5 p-1'>
                 <div className={`text-xl md:text-3xl w-full mt-20 ${raleway.className}`}>
                   <h2 className='mb-4 text-4xl md:text-7xl animate-fade-in-up uppercase font-bold'>
@@ -254,19 +255,19 @@ export default function Home() {
                   <p className='mb-4 text-4xl md:text-6xl md:ml-40 ml-20 animate-fade-in-up uppercase font-bold'>
                     {t('i-am')}
                   </p>
-
+                  {/*NOME */}
                   <div className='relative font-bold animate-fade-in-up m-0 p-0 h-96'>
                     <div className='flex justify-center'>
                       <img src='/images/ft_1.png' className='w-96'></img>
                     </div>
                     <p
-                      className={`absolute bottom-12 left-3 md:top-16 md:left-96 mb-4 text-4xl md:text-6xl md:ml-48 animate-fade-in-up uppercase  text-customRose md:text-customBlack z-[10] font-semibold w-1/2  text-stroke`}                  
+                      className={`absolute bottom-12 left-3 md:top-16 md:left-96 mb-4 text-4xl md:text-6xl md:ml-48 animate-fade-in-up uppercase  text-customRose md:text-customBlack z-[10] font-semibold w-1/2  text-stroke`}
                     >
                       {t("name")}
                     </p>
                     <p
                       className={`absolute bottom-12 -right-12 md:top-32 md:-right-52 mb-4 text-4xl md:text-6xl md:ml-24 animate-fade-in-up uppercase text-customRose md:text-customBlack z-[10] font-semibold w-1/2`}
-                     
+
                     >
                       {t("lastname")}
                     </p>
@@ -276,7 +277,7 @@ export default function Home() {
               </div>
 
               {/* div descrição */}
-              <div className='relative -top-20 w-full md:h-screen md:w-full text-sm mt-5 md:mt-16 p-1 mb-4 md:pl-10 bg-customBlack text-customGray z-[0] pt-20 animate-fade-in-up'>
+              <div className='relative -top-20 w-full md:h-screen md:w-full text-sm mt-5 md:mt-16 p-1 md:pl-10 bg-customBlack rounded-b-lg text-customGray z-[0] pt-20 animate-fade-in-up'>
                 <div className='w-full mb-5 md:p-10 md:px-24 px-8 '>
                   <p className='text-sm md:text-md md:mb-2 mb-4 leading-relaxed'>
                     {t('description-pt1')}
@@ -288,37 +289,37 @@ export default function Home() {
                     {t('description-pt3')}
                   </p>
                 </div>
-                
-                 {/* Div imagem e links sociais */}
-              <div className='w-full'>
-                <div className="flex gap-6 py-8 justify-center md:gap-16">
-                  <a href='https://www.linkedin.com' target='_blank' rel="noopener noreferrer">
-                    <IoLogoLinkedin className='text-2xl' />
-                  </a>
-                  <a href='https://www.github.com/andrezzalima' target='_blank' rel="noopener noreferrer">
-                    <FaGithub className='text-2xl' />
-                  </a>
-                  <a href='https://www.instagram.com/andrezzalimadev' target='_blank' rel="noopener noreferrer">
-                    <FaInstagram className='text-2xl' />
-                  </a>
-                  <a href='/CV_Andrezza_Lima.pdf' download='CV_Andrezza-Lima.pdf' className='flex items-center'>
-                    <IoCloudDownloadSharp className='mr-3 text-2xl' /> Download CV
-                  </a>
+
+                {/* Div imagem e links sociais */}
+                <div className='w-full'>
+                  <div className="flex gap-6 py-8 justify-center md:gap-16">
+                    <a href='https://www.linkedin.com' target='_blank' rel="noopener noreferrer">
+                      <IoLogoLinkedin className='text-2xl' />
+                    </a>
+                    <a href='https://www.github.com/andrezzalima' target='_blank' rel="noopener noreferrer">
+                      <FaGithub className='text-2xl' />
+                    </a>
+                    <a href='https://www.instagram.com/andrezzalimadev' target='_blank' rel="noopener noreferrer">
+                      <FaInstagram className='text-2xl' />
+                    </a>
+                    <a href='/CV_Andrezza_Lima.pdf' download='CV_Andrezza-Lima.pdf' className='flex items-center'>
+                      <IoCloudDownloadSharp className='mr-3 text-2xl' /> Download CV
+                    </a>
+                  </div>
                 </div>
-              </div>
               </div>
 
             </div>
 
             {/* div projects */}
-            <div className='flex flex-col gap-5 text-center text-customBlack p-5' id='projects' style={{
-              background: "linear-gradient(0deg, rgba(107,33,168,1) 0%, rgba(230,231,232,1) 100%)"
-            }}>
-              <h2 className={`text-3xl my-4 ${raleway.className}`}>{t('my-projects')}</h2>
-              <div className="flex flex-col align-center justify-center md:flex-row ">
-                <HoverEffect items={projects} />
-              </div>
+            <div  className='text-center text-customBlack px-5' id='projects' >
+              <h2 className={`text-3xl  ${raleway.className} font-medium`}>{t('my-projects')}</h2>
+              
+              {<div className="flex flex-col align-center justify-center md:flex-row ">
+                {<HoverEffect items={projects} />}
+              </div>}
             </div>
+            
             {/* div experiences */}
             <div className="p-5 flex flex-col items-center gap-5 text-center md:h-screen" id="experience">
               <h2 className={`text-3xl my-4 md:mt-20 ${raleway.className}`}>{t('experience')}</h2>
