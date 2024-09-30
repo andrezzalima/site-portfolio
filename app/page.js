@@ -64,12 +64,12 @@ const projects = [
     link: "https://bytes4colors-j9vc9ns42-andrezzalima.vercel.app/"
   },
   {
-    image: "/images/projeto3.png",
+    image: "/images/projeto4.png",
     link: "https://pixel-31hycb1qw-andrezzalimas-projects.vercel.app/"
   },
   {
-    image: "/images/projeto4.png",
-    link: "https://time-of-7z9pppesv-andrezzalima.vercel.app/"
+    image: "/images/projeto5.png",
+    link: "https://cristianefabres.vercel.app/"
   }
 ];
 
