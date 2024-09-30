@@ -1,17 +1,13 @@
 "use client";
 
 import './globals.css';
-import { Roboto } from 'next/font/google';
-import { Montserrat_Alternates } from 'next/font/google';
-import { Raleway } from 'next/font/google';
-import { Playfair_Display } from 'next/font/google';
+import { Roboto, Montserrat_Alternates, Raleway, Playfair_Display } from 'next/font/google';
 
-import { useState } from "react";
-import { useEffect } from 'react';
+import { useState, useEffect } from "react";
 import { useTranslation } from 'react-i18next';
 import '../next-i18next.config.js';
 import Image from 'next/image';
-import { HoverEffect } from "./ui/card-hover-effect";
+import  Carousel  from "./carrossel";
 
 import { RiNextjsFill } from "react-icons/ri";
 import { RiJavascriptFill } from "react-icons/ri";
@@ -312,12 +308,11 @@ export default function Home() {
             </div>
 
             {/* div projects */}
-            <div  className='text-center text-customBlack px-5' id='projects' >
-              <h2 className={`text-3xl  ${raleway.className} font-medium`}>{t('my-projects')}</h2>
-              
-              {<div className="flex flex-col align-center justify-center md:flex-row ">
-                {<HoverEffect items={projects} />}
-              </div>}
+            <div  className='text-center text-customBlack px-5 w-full' id='projects' >
+              <h2 className={`text-3xl mb-4 ${raleway.className} font-medium`}>{t('my-projects')}</h2>
+                            
+                {<Carousel />}
+             
             </div>
             
             {/* div experiences */}

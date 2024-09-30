@@ -57,3 +57,38 @@
 }
 
 
+/* Estilos do Carrossel */
+.carousel {
+  height: auto; 
+  min-height: 400px; 
+  overflow: hidden; 
+  margin-bottom: 0;
+}
+
+.carousel-slide {
+  padding: 30px; 
+  height: 100%; 
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
+
+.slick-slider {
+  display: block !important;
+}
+
+
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .carousel {
+    height: 500px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    height: 300px;
+  }
+}
+
