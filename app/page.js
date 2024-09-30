@@ -298,7 +298,7 @@ export default function Home() {
                     <a href='https://www.instagram.com/andrezzalimadev' target='_blank' rel="noopener noreferrer">
                       <FaInstagram className='text-2xl' />
                     </a>
-                    <a href='/CV_Andrezza_Lima.pdf' download='I-CV Andrezza Lima.pdf' className='flex items-center'>
+                    <a href='/I-CV_Andrezza_Lima.pdf' download='CV_Andrezza_Lima.pdf' className='flex items-center'>
                       <IoCloudDownloadSharp className='mr-3 text-2xl' /> Download CV
                     </a>
                   </div>
