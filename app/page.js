@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import { useTranslation } from 'react-i18next';
 import '../next-i18next.config.js';
 import Image from 'next/image';
-import  Carousel  from "./carrossel";
+import Carousel from "./carrossel";
 
 import { RiNextjsFill } from "react-icons/ri";
 import { RiJavascriptFill } from "react-icons/ri";
@@ -24,7 +24,7 @@ import { SiExpress } from "react-icons/si";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaGithub, FaInstagram } from "react-icons/fa6";
 import { IoCloudDownloadSharp } from "react-icons/io5";
-import { DiCodeigniter } from "react-icons/di";
+import { DiCodeigniter, DiWordpress } from "react-icons/di";
 import { IoMenu } from "react-icons/io5";
 import { FaRegCopyright } from "react-icons/fa6";
 
@@ -137,7 +137,7 @@ export default function Home() {
 
       {isLanguageLoaded ? (
         <section className={`flex flex-col md:min-h-screen md:w-screen w-scren text-customBlack ${raleway.className} md:px-52  md:bg-customBlack`}>
-          
+
           <div className='relative bg-customGray flex flex-col items-center'>
             {/* Botão do menu hambúrguer */}
             <div className="fixed top-5 left-5 md:left-auto z-10 w-2/3">
@@ -238,7 +238,6 @@ export default function Home() {
                 )}
               </div>
             </div>
-
             {/* Sobre mim */}
             <div id="about" className='flex flex-col items-center md:h-full px-10 md:px-20 w-full min-h-screen bg-customGray'>
 
@@ -275,14 +274,17 @@ export default function Home() {
               {/* div descrição */}
               <div className='relative -top-20 w-full md:h-screen md:w-full text-sm mt-5 md:mt-16 p-1 md:pl-10 bg-customBlack rounded-b-lg text-customGray z-[0] pt-20 animate-fade-in-up'>
                 <div className='w-full mb-5 md:p-10 md:px-24 px-8 '>
-                  <p className='text-sm md:text-md md:mb-2 mb-4 leading-relaxed'>
+                  <p className='text-sm md:text-md md:mb-2 mb-2 leading-relaxed'>
                     {t('description-pt1')}
                   </p>
                   <p className='text-sm md:text-md mb-2 leading-relaxed'>
                     {t('description-pt2')}
                   </p>
-                  <p className='text-sm md:text-md leading-relaxed'>
+                  <p className='text-sm md:text-md mb-2 leading-relaxed'>
                     {t('description-pt3')}
+                  </p>
+                  <p className='text-sm md:text-md leading-relaxed'>
+                    {t('description-pt4')}
                   </p>
                 </div>
 
@@ -308,30 +310,33 @@ export default function Home() {
             </div>
 
             {/* div projects */}
-            <div  className='text-center text-customBlack px-5 w-full' id='projects' >
+            <div className='text-center text-customBlack px-5 w-full' id='projects' >
               <h2 className={`text-3xl mb-4 ${raleway.className} font-medium`}>{t('my-projects')}</h2>
-                            
-                {<Carousel />}
-             
+
+              {<Carousel />}
+
             </div>
-            
+
             {/* div experiences */}
-            <div className="p-5 flex flex-col items-center gap-5 text-center md:h-screen" id="experience">
-              <h2 className={`text-3xl my-4 md:mt-20 ${raleway.className}`}>{t('experience')}</h2>
+            <div className="p-10 flex flex-col items-center gap-10 text-center md:h-screen" id="experience">
+              <h2 className={`text-4xl font-semibold text-customPurple my-8 md:mt-20 ${raleway.className} animate-fade-in-up`}>
+                {t('experience')}
+              </h2>
 
-              <div className='flex flex-col gap-3 p-5 border-2 border-purple-400 rounded-xl md:w-1/2  transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-400 hover:scale-105 hover:bg-purple-50'>
-                <h3 className='text-customPurple font-bold'>{t('function1')}</h3>
-                <p><span className='text-customPurple'>Skills: </span>PHP, CODEIGNITER, POSTGRESQL, TORTOISE, XAMPP, BOOTSTRAP</p>
-                <p className='text-sm'>{t('desctiption-f1')}</p>
-              </div>
+              <div className="flex flex-col gap-6 md:flex-row md:gap-10 text-customBlack">
+                <div className="p-6 border-2 border-customPurple rounded-xl shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:bg-customPurple hover:scale-105 hover:shadow-customPurple text-customPurple hover:text-customGray">
+                  <h3 className="font-bold text-xl mb-2">{t('function1')}</h3>
+                  <p className="font-medium mb-2"><span className="text-customPurple">Skills: </span>PHP, CodeIgniter, PostgreSQL, Tortoise, XAMPP, Bootstrap</p>
+                  <p className="text-sm">{t('desctiption-f1')}</p>
+                </div>
 
-              <div className='flex flex-col mb-4 gap-3 p-5 border-2 border-purple-400 rounded-xl md:w-1/2  transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-400 hover:scale-105 hover:bg-purple-50'>
-                <h3 className='text-customPurple font-bold'>{t('function2')}</h3>
-                <p><span className='text-customPurple'>Skills: </span>HTML, CSS, JAVASCRIPT, REACT, MONGODB, TAILWIND</p>
-                <p className='text-sm'>{t('desctiption-f2')}</p>
+                <div className="p-6 border-2 border-customPurple rounded-xl shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:bg-customPurple hover:scale-105 hover:shadow-customPurple relative  text-customPurple hover:text-customGray">
+                  <h3 className="font-bold text-xl mb-2">{t('function2')}</h3>
+                  <p className="font-medium mb-2"><span className="text-customPurple">Skills: </span>HTML, CSS, JavaScript, React, MongoDB, Tailwind</p>
+                  <p className="text-sm">{t('desctiption-f2')}</p>
+                </div>
               </div>
             </div>
-
 
             {/* Formulário de contato */}
             <div id='contact' className='flex flex-col items-center justify-center w-full text-customGray p-5 bg-customPurple md:h-screen'>
@@ -417,6 +422,10 @@ export default function Home() {
                   <SiExpress className='text-3xl md:text-6xl text-customPurple transition-transform duration-300 hover:scale-110 hover:text-purple-600 hover:drop-shadow-glow' />
                   Express
                 </div>
+                <div className='flex flex-col items-center'>
+                  <DiWordpress className='text-3xl md:text-6xl text-customPurple transition-transform duration-300 hover:scale-110 hover:text-purple-600 hover:drop-shadow-glow' />
+                  Wordpress
+                </div>
               </div>
             </div>
 
@@ -432,6 +441,7 @@ export default function Home() {
 
           </div>
         </section>
+
 
 
       ) : (
